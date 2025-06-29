@@ -33,9 +33,7 @@ Aqui serão listado as configurações importantes de cada componente
 
 pfSense é um programa de código aberto com o objetivo de ser usado como roteador e firewall, com uma interface simples de utilizar, e vários recursos adicionais, neste projeto utilizarei syslog-ng e snort.
 
-### Interfaces:
-
-![Screenshot From 2025-06-27 23-48-45](https://github.com/user-attachments/assets/a3fbf7d1-0d47-47c3-ba1b-6fda95c00fd2)
+![Screenshot From 2025-06-29 00-50-25](https://github.com/user-attachments/assets/6e9d0779-7f63-489c-9c49-9d78bef7977e)
 
 As interfaces e seus respectivos IPs
 
@@ -107,12 +105,34 @@ Wazuh além de um SIEM (Security Information and Event Management) responsável 
 
 ![Screenshot From 2025-06-27 23-54-13](https://github.com/user-attachments/assets/b74d5bce-5e4a-419a-b267-b3c3805ee64d)
 
+## Host Windows 10
+Máquina Windows 10 integrada ao Active Directory pelo usuário "John Smith" e também enviando os logs para o Wazuh. 
+
+![Screenshot From 2025-06-29 00-55-20](https://github.com/user-attachments/assets/17b44f15-7db2-44ac-a77b-437873aee667)
+
+## Active Directory
+
+Windows Server com Active Directory (domínio soc.lab)
+
+![Screenshot From 2025-06-29 00-50-34](https://github.com/user-attachments/assets/9ed4e703-1d65-4ec0-b078-e3482ad30c5a)
 
 
+## Máquina de Pentest
 
+Aqui utilizarei o Kali Linux, comumente utilizado para pentestinge será utilizado para demonstrar a ativação de alguns logs e alertas.
 
+![Screenshot From 2025-06-29 00-53-52](https://github.com/user-attachments/assets/d558367d-ec78-43b6-825e-0ad1b25ef4a2)
 
+ 
+Para a demonstração dos recursos do laboratório, serão realizados as seguintes simulações de ameaças:
+- RDP Brute Force no Active Directory
+- Reverse Shell no Apache Server
+- Active Scanning
 
+Além disso, será demonstrado os seguintes:
+-  Bloqueios do Firewall
+-  Alertas do Snort
+-  Mapeamento do MITRE ATT&CK pelo Wazuh 
 
-
+ 
 
