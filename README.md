@@ -18,6 +18,10 @@ Os recursos serão os seguintes:
 - pfSense (Firewall)
 - Snort (IDS/IPS)
 
+# Configurações: 
+
+Aqui estão listados como foram configurados cada componente: [Configurações das VMs](Configurações/Configurações.md)
+
 
 # Diagrama da rede
 
@@ -25,15 +29,7 @@ Todas as máquinas estão dispostas da seguinte forma, com seus devidos IPs, Gat
 
 ![Diagrama da Rede](https://github.com/user-attachments/assets/e1954d0f-0de8-4324-88f7-b16f91d76740)
 
-# Configurações: 
-
-Aqui serão listado as configurações importantes de cada componente
-
-[Configurações](Configurações/Configurações.md)
-
-## Agentes
-
-![Screenshot From 2025-06-27 23-54-13](https://github.com/user-attachments/assets/b74d5bce-5e4a-419a-b267-b3c3805ee64d)
+# Máquinas da Rede
 
 ## Host Windows 10
 Máquina Windows 10 integrada ao Active Directory pelo usuário "John Smith" e também enviando os logs para o Wazuh. 
