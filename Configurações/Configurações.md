@@ -69,3 +69,7 @@ Wazuh além de um SIEM (Security Information and Event Management) responsável 
 ## Painel Principal
 
 ![Screenshot From 2025-06-27 23-54-13](https://github.com/user-attachments/assets/7f0af3b7-2932-45cd-9427-07795990a7a3)
+
+## Agentes
+
+![Screenshot From 2025-06-27 23-54-13](https://github.com/user-attachments/assets/b74d5bce-5e4a-419a-b267-b3c3805ee64d)
