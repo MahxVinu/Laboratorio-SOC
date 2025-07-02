@@ -14,7 +14,7 @@ Estou permitindo qualquer source externo, com destino sendo a porta 3389 (respon
 
 Considerando esse contexto de ataque, será criado uma regra de correlação. Regras de correlação consideram mais de um contexto para gerar o alarme, nesse caso, eu considerei que múltiplas falhas de login que no final terminam em um login sucedido uma atividade suspeita de possível utilizaçao de ferramentas automatizadas.
 
-![image](https://github.com/user-attachments/assets/b8e05d46-921e-4281-9abe-69cc6096f0e5)
+![Screenshot From 2025-07-02 04-39-11](https://github.com/user-attachments/assets/d13ee699-6ae7-45a9-a702-e6db5d472a21)
 
 - Em ordem, a primeira criação é uma regra básica que detecta um login com tipo de logon 10 (RDP) e gera um alerta de nivel 3 que faz parte do grupo "login_ok" que eu utilizarei futuramente.
 
