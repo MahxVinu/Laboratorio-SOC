@@ -20,4 +20,46 @@ Considerando esse contexto de ataque, será criado uma regra de correlação. Re
 
 - A segunda regra considera um intervalo de 60 segundos em que analisa se o alerta de ID 60122 (login falho do Windows) foi ativado 5 vezes ou mais, com o tipo de login 3 ou 10 (por mais que o método seja via RDP, as ferramentas automatizadas ativam um alerta de LogonType 3) e é gerado um alerta customizado,alertando as múltiplas falhas de login.
 
-- A terceira é uma regra de correlação, ela considera um intervalo maior, em que caso a regra anterior seja repetida mais de 1 vez (muito comum visto que essas ferramentas testando milhares de credenciais) e após isso, um login seja sucedido, gera um alerta alertando um login suspeito. A razão pelo qual isso foi alcançado foi o grupo "login_ok", o Wazuh não permite colocar mais de uma regra em <matched_sid></matched_sid>, então o <if_group></if_group> analisa se algum alerta foi gerado anteriormente em que faz parte desse grupo.
+- A terceira é uma regra de correlação, ela considera um intervalo maior, em que caso a regra 100002 seja repetida mais de uma vez (muito comum visto que essas ferramentas testam milhares de credenciais)e logo depois um login seja sucedido, gera um alerta de um possivel login suspeito. A razão pelo qual isso foi que o alerta além de checar a ativação do alerta 100002, ele também verifica se algum alerta do grupo "login_ok" também existe, isso foi utilizado visto que o Wazuh não permite colocar mais de uma regra em <if_matched_sid></if_matched_sid>.
+
+
+# Simulação do ataque
+
+Aqui, utilizando o Kali Linux e a ferramenta Hydra, utilizaremos o seguinte comando:
+
+```
+hydra -L user.txt -P pass.txt 1.1.1.1 rdp
+```
+
+que basicamente chama duas listas salvas no computador com alguns usários e senhas, então eu informo o endereço de IP e o método (RDP). Isso gera o seguinte resultado:
+
+![image](https://github.com/user-attachments/assets/1e7607b5-cca3-4a4d-a620-fc4038bd7b4d)
+
+Hydra encontrou um usuário e senha, agora eu utilizarei essas credenciais para acessar a máquina com o seguinte comando:
+
+```
+xfreerdp3 /u:Administrator /p:testpassword123! /v:1.1.1.1
+```
+
+![image](https://github.com/user-attachments/assets/f1e57869-7b19-4faf-b502-8041f8d5624b)
+
+Com isso, acessamos com sucesso a máquina interna da rede. 
+
+# Alerta no Dashboard
+
+Aqui, veremos como aparecem os alertas durante o ataque.
+
+## Durante o Brute force com Hydra
+
+![image](https://github.com/user-attachments/assets/94b6acb9-fecf-4185-91bf-784f63313973)
+
+
+Como podemos ver, o segundo alerta criado foi gerado, devido a alta quantidade de tentativas.
+
+## Ao Conectar-se a Máquina
+
+![image](https://github.com/user-attachments/assets/bfe831d4-022f-49ba-b2f2-340fc7ba168f)
+
+Aqui, após as múltiplas tentativas e um login bem sucedido do atacante, é realizado com sucesso uma conexão, que ativa o primeiro alerta, e por conseguinte preenche todos os requisitos do alerta 3, que é ativado.
+
+Com isso, foi possivel ver uma vulnerabilidade que pode existir em um sistema, um método de ataque, e formas de e alertar e monitorar os acontecimentos.
