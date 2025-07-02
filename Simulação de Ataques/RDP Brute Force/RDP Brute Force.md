@@ -1,5 +1,4 @@
-# Situação Inicial
-
+# Introdução
 Parar criar o cenário da simulação, primeiro eu considerei a seguinte situação: foi aberto para a internet a porta 3389 (RDP) para se conectar a computadores da rede interna via RDP, utilizando o IP externo, além disso, coloquei a máquina interna com uma senha fraca. Com o kali linux, eu utilizarei a ferramenta Hydra para Brute Force, utilizando de 2 listas (usuários e senhas) que retornam as combinações que funcionaram, após isso eu logarei na máquina via RDP utilizando o FREEDRP. 
 
 > **[AVISO]:** abrir a porta de RDP para rede externa é extremamente inseguro e não deve ser feito, aqui foi criado uma situação em que uma configuração equivocada foi feita, e assim um atacante aproveitou da vulnerabilidade. O recomendado é se utilizar de VPN, que não é do escopo desse projeto.
