@@ -2,7 +2,7 @@
 
 Nessa etapa de testes, testaremos como o Snort alerta e age contra ataques á um servidor Ubuntu na rede DMZ. 
 
-Para saber sobre a ferramenta e configurações veja [aqui](Laboratorio-SOC/Snort/Snort.md)
+Para saber sobre a ferramenta e configurações veja [aqui](Snort/Snort.md)
 
 Na VM do Kali Linux, utilizaremos a ferramenta Jooomscan, capaz de encontrar vulnerabilidades, configurações inadequadas e situações em que o atacante pode comprometer o sistema. 
 
