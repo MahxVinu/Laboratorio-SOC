@@ -27,10 +27,12 @@ Aqui, estão as regrãs de anti-lockout, e 2 regras criadas, uma que permite o p
 
 ### DMZ
 
-![image](https://github.com/user-attachments/assets/d79ac54d-c8dd-4b89-a24a-8f9431d8077b)
+![image](https://github.com/user-attachments/assets/2275830c-8f0f-4217-a68e-cf23012f1750)
+
 
 Definição de regras corretas no DMZ são de extrema importância, nesse caso, as regras criadas foram as seguintes:
 
+- Permitir o envio de logs para o Wazuh pela porta 1514, via protocolo TCP com endereço de destino sendo o servidor do Wazuh.
 - Bloquear o DMZ de acessar o painel do pfSense
 - Bloquear o Acesso do DMZ para a rede LAN interna
 - Permitir o Acesso do DMZ ao exterior
@@ -68,5 +70,6 @@ Wazuh além de um SIEM (Security Information and Event Management) responsável 
 
 ## Agentes
 
-![Screenshot From 2025-07-02 22-51-49](https://github.com/user-attachments/assets/8850f3a3-d7ff-4946-bdcc-8b9fcc2628e4)
+![Screenshot From 2025-07-03 00-01-28](https://github.com/user-attachments/assets/5f374082-8ffb-45d8-a4e5-9430a1b3034e)
+
 
