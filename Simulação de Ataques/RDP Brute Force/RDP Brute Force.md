@@ -55,9 +55,15 @@ Aqui, veremos como aparecem os alertas durante o ataque.
 
 Como podemos ver, o segundo alerta criado foi gerado, devido a alta quantidade de tentativas.
 
+
+
 ## Ao Conectar-se a Máquina
 
 ![image](https://github.com/user-attachments/assets/bfe831d4-022f-49ba-b2f2-340fc7ba168f)
+
+![image](https://github.com/user-attachments/assets/2e5e8ad7-02bc-453d-a0e2-ea975b944ccb)
+
+
 
 Aqui, após as múltiplas tentativas e um login bem sucedido do atacante, é realizado com sucesso uma conexão, que ativa o primeiro alerta, e por conseguinte preenche todos os requisitos do alerta 3, que é ativado.
 
