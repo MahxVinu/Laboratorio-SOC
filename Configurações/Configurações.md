@@ -53,12 +53,6 @@ A razão que utilizei o syslog-ng nesse projeto é pelo fato da estrutura do log
 Aqui, habilitei o envio dos logs via Syslog para a porta 5140, porta do syslog-ng , que irá enviar os logs para o wazuh via porta 514.
 
 
-### Configuração Snort
-
-![Screenshot From 2025-06-27 23-55-39](https://github.com/user-attachments/assets/ccd66464-ee3a-43aa-9503-1e1127c6aef1)
-![image](https://github.com/user-attachments/assets/73cb86c3-9c00-4566-bfe0-1bae79191edf)
-
-Neste projeto eu habilitei todas as categorias do wauzh, e habilitei a detecção de port-scan para tentativas de reconnaissance
 
 
 
